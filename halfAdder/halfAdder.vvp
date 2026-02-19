@@ -1,0 +1,19 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_01144570 .scope module, "half_adder" "half_adder" 2 2;
+ .timescale -9 -12;
+L_01143390 .functor XOR 1, C4<z>, C4<z>, C4<0>, C4<0>;
+L_01144FC0 .functor AND 1, C4<z>, C4<z>, C4<1>, C4<1>;
+v01143288_0 .net "a", 0 0, C4<z>; 0 drivers
+v011432E0_0 .net "b", 0 0, C4<z>; 0 drivers
+v01143338_0 .net "carry_out", 0 0, L_01144FC0; 1 drivers
+v01144F68_0 .net "sum", 0 0, L_01143390; 1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "halfAdder.v";

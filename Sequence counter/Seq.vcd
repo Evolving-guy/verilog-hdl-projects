@@ -1,0 +1,95 @@
+$date
+	Thu Feb 19 15:26:53 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module seqCounterTB $end
+$var wire 2 ! count [1:0] $end
+$var reg 1 " clk $end
+$var reg 1 # reset $end
+$scope module dut $end
+$var wire 1 $ clk $end
+$var wire 1 % reset $end
+$var reg 2 & count [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b11 &
+1%
+0$
+1#
+0"
+b11 !
+$end
+#5
+1"
+1$
+#10
+0"
+0$
+0#
+0%
+#15
+b0 &
+b0 !
+1"
+1$
+#20
+0"
+0$
+#25
+b1 &
+b1 !
+1"
+1$
+#30
+0"
+0$
+#35
+b10 &
+b10 !
+1"
+1$
+#40
+0"
+0$
+#45
+b11 &
+b11 !
+1"
+1$
+#50
+0"
+0$
+1#
+1%
+#55
+1"
+1$
+#60
+0"
+0$
+#65
+1"
+1$
+#70
+0"
+0$
+#75
+1"
+1$
+#80
+0"
+0$
+#85
+1"
+1$
+#90
+0"
+0$

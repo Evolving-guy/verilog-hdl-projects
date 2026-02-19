@@ -1,0 +1,50 @@
+#! /c/iverilog/bin/vvp
+:ivl_version "0.9.7 " "(v0_9_7)";
+:vpi_time_precision - 12;
+:vpi_module "system";
+:vpi_module "v2005_math";
+:vpi_module "va_math";
+S_012E30E0 .scope module, "Accumulator" "Accumulator" 2 4;
+ .timescale -9 -12;
+P_011417F4 .param/l "max" 2 10, C4<1111111111111111>;
+v012E3168_0 .net "clk", 0 0, C4<z>; 0 drivers
+v012EECD8_0 .net "d", 7 0, C4<zzzzzzzz>; 0 drivers
+v012EED30_0 .net "reset", 0 0, C4<z>; 0 drivers
+v012EED88_0 .var "sum", 15 0;
+E_01141650 .event posedge, v012EED30_0, v012E3168_0;
+    .scope S_012E30E0;
+T_0 ;
+    %wait E_01141650;
+    %load/v 8, v012EED30_0, 1;
+    %jmp/0xz  T_0.0, 8;
+    %ix/load 0, 16, 0;
+    %assign/v0 v012EED88_0, 0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %movi 8, 65535, 18;
+    %load/v 26, v012EED88_0, 16;
+    %mov 42, 0, 2;
+    %load/v 44, v012EECD8_0, 8;
+    %mov 52, 0, 10;
+    %add 26, 44, 18;
+    %cmp/u 8, 26, 18;
+    %jmp/0xz  T_0.2, 5;
+    %ix/load 0, 16, 0;
+    %assign/v0 v012EED88_0, 0, 1;
+    %jmp T_0.3;
+T_0.2 ;
+    %load/v 8, v012EED88_0, 16;
+    %load/v 24, v012EECD8_0, 8;
+    %mov 32, 0, 8;
+    %add 8, 24, 16;
+    %ix/load 0, 16, 0;
+    %assign/v0 v012EED88_0, 0, 8;
+T_0.3 ;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Accumulator.v";
