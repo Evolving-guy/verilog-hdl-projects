@@ -1,5 +1,5 @@
-.out
-.vcd
-.vvp
-.gtkw
+*.out
+*.vcd
+*.vvp
+*.gtkw
 
