@@ -1,3 +1,5 @@
+// A basic test module to understand if Icarus verilog can compile.
+
 module hello;
  initial
   begin
