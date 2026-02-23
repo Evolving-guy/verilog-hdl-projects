@@ -1,4 +1,4 @@
-# 8 Bit Multiply Accumulate Unit with Saturation
+# 16 Bit Multiply Accumulate Unit with Saturation
 
 This project implements a sequential multiply accumulate unit in Verilog HDL.
 
