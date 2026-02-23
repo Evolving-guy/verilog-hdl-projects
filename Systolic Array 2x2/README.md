@@ -65,23 +65,6 @@ Initial cycles fill the array
 Middle cycles perform steady state computation  
 Final cycles flush remaining partial sums  
 
-For an N x N systolic array, total latency is approximately
-
-2N + N − 2 cycles  
-
-This project demonstrates that concept concretely for N = 2.
-
-## Timing Behavior
-
-For the 2x2 case
-
-2 cycles to load data  
-1 cycle for propagation  
-1 cycle to complete accumulation  
-
-The wavefront behavior can be observed clearly in simulation.
-
-Outputs do not appear simultaneously. They emerge in a staggered pattern due to pipeline propagation across the array.
 
 ## Importance
 
